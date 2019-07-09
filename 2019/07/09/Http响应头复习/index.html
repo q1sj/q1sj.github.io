@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Q1sj&#39;s Blog">
 <meta property="og:description" content="#HTTP常用响应头 设置返回数据的另一个位置 配合302状态码使用">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T06:21:01.790Z">
+<meta property="og:updated_time" content="2019-07-09T06:22:19.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Q1sj&#39;s Blog">
 <meta name="twitter:description" content="#HTTP常用响应头 设置返回数据的另一个位置 配合302状态码使用">
@@ -156,6 +156,7 @@
         <p>#HTTP常用响应头</p>
 <p><strong>设置返回数据的另一个位置 配合302状态码使用</strong></p>
 <a id="more"></a>
+
 <pre><code>response.setStatus(302);
 response.setHeader(&quot;Location&quot;,&quot;index.html&quot;);</code></pre><p><strong>下载</strong></p>
 <pre><code>response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=&quot;+filename);
