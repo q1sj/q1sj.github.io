@@ -146,6 +146,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JDBC复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#JDBC复习笔记</p>
+<p>##1.建立连接</p>
+<p>使用现有工具类</p>
+<p>##2.创建对象 传入sql语句<br>如:</p>
+<pre><code>String sql=&quot;insert into student values(?,?)&quot;;
+
+PreparedStatement ps = conn.prepareStatement(sql);</code></pre><p>##3.设置占位符的内容<br>    ps.setInt(1,stu.getId());<br>    ps.setString(2, stu.getName());<br>    ps.executeUpdate();//执行代码 返回有几行变更</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/09/JDBC复习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Http响应头复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#HTTP常用响应头</p>
+<p><strong>设置返回数据的另一个位置 配合302状态码使用</strong></p>
+<pre><code>response.setStatus(302);
+response.setHeader(&quot;Location&quot;,&quot;index.html&quot;);</code></pre><p><strong>下载</strong></p>
+<pre><code>response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=&quot;+filename);
+InputStream is=new FileInputStream(realPath);
+OutputStream os = response.getOutputStream();
+
+byte[] buffer=new byte[1024];
+int len;
+while((len=is.read(buffer))!=-1){
+            os.write(buffer,0,len);
+}
+//关闭流</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/09/Http响应头复习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
