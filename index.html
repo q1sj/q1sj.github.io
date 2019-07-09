@@ -153,12 +153,7 @@
       
         <p>#JDBC复习笔记</p>
 <p>##1.建立连接</p>
-<p>使用现有工具类</p>
-<p>##2.创建对象 传入sql语句<br>如:</p>
-<pre><code>String sql=&quot;insert into student values(?,?)&quot;;
-
-PreparedStatement ps = conn.prepareStatement(sql);</code></pre><p>##3.设置占位符的内容<br>    ps.setInt(1,stu.getId());<br>    ps.setString(2, stu.getName());<br>    ps.executeUpdate();//执行代码 返回有几行变更</p>
-
+        
       
 
       
@@ -207,18 +202,7 @@ PreparedStatement ps = conn.prepareStatement(sql);</code></pre><p>##3.设置占�
       
         <p>#HTTP常用响应头</p>
 <p><strong>设置返回数据的另一个位置 配合302状态码使用</strong></p>
-<pre><code>response.setStatus(302);
-response.setHeader(&quot;Location&quot;,&quot;index.html&quot;);</code></pre><p><strong>下载</strong></p>
-<pre><code>response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=&quot;+filename);
-InputStream is=new FileInputStream(realPath);
-OutputStream os = response.getOutputStream();
-
-byte[] buffer=new byte[1024];
-int len;
-while((len=is.read(buffer))!=-1){
-            os.write(buffer,0,len);
-}
-//关闭流</code></pre>
+        
       
 
       
