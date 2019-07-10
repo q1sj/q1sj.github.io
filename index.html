@@ -146,6 +146,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-session" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/10/session/">Session常用代码</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/10/session/" class="archive-article-date">
+  	<time datetime="2019-07-10T05:34:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-获取Session对象——Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。"><a href="#1-获取Session对象——Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。" class="headerlink" title="1.获取Session对象——Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。"></a>1.获取Session对象——Session对象由服务器创建，开发人员可以调用request对象的getSession方法得到session对象。</h3><pre><code>//获取Sesseion对象
+HttpSession session=request.getSession();
+session.setAttribute(&quot;username&quot;, &quot;zhangsan&quot;);//存储
+session.getAttribute(&quot;username&quot;);//获取
+session.removeAttribute(&quot;username&quot;);//删除</code></pre><p>Session对象的创建时间：</p>
+<p>当第一次调用request.getSession()的时候创建session容器.</p>
+<pre><code>如果第一次访问jsp页面,也会创建session容器           </code></pre><p>Session的销毁：</p>
+<p>1、 （自动销毁）Session在服务器的存活时间。Session对象在服务器内部有默认的存活的时间。一般默认是30分钟。如果在30分钟内，用户没有再对当前这个服务器中的资源进行任何的访问操作，这时只要时间到达30分钟，服务器会自动的销毁这个session。</p>
+<p>2、在程序执行中,手动销毁session容器, 使用 session.invalidate()</p>
+<p>3、 不正常关闭服务器。直接点击控制台的红点，强制关闭tomcat</p>
+<p>如果是正常关闭服务器，这时服务器内部会使用IO流中的序列化技术把这个Session对象保存在tomcat/work目录下面。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/10/session/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Http响应头复习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
