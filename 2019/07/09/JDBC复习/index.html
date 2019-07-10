@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JDBC | Q1sj&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#JDBC复习笔记 ##1.建立连接">
+  <meta name="description" content="JDBC复习笔记1.建立连接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDBC">
 <meta property="og:url" content="http://yoursite.com/2019/07/09/JDBC复习/index.html">
 <meta property="og:site_name" content="Q1sj&#39;s Blog">
-<meta property="og:description" content="#JDBC复习笔记 ##1.建立连接">
+<meta property="og:description" content="JDBC复习笔记1.建立连接">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T11:17:57.353Z">
+<meta property="og:updated_time" content="2019-07-10T05:36:30.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDBC">
-<meta name="twitter:description" content="#JDBC复习笔记 ##1.建立连接">
+<meta name="twitter:description" content="JDBC复习笔记1.建立连接">
   
     <link rel="alternative" href="/atom.xml" title="Q1sj&#39;s Blog" type="application/atom+xml">
   
@@ -168,16 +168,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#JDBC复习笔记</p>
-<p>##1.建立连接</p>
-<a id="more"></a>
+        <h1 id="JDBC复习笔记"><a href="#JDBC复习笔记" class="headerlink" title="JDBC复习笔记"></a>JDBC复习笔记</h1><h2 id="1-建立连接"><a href="#1-建立连接" class="headerlink" title="1.建立连接"></a>1.建立连接</h2><a id="more"></a>
 
 <p>使用现有工具类</p>
-<p>##2.创建对象 传入sql语句<br>如:</p>
+<h2 id="2-创建对象-传入sql语句"><a href="#2-创建对象-传入sql语句" class="headerlink" title="2.创建对象 传入sql语句"></a>2.创建对象 传入sql语句</h2><p>如:</p>
 <pre><code>String sql=&quot;insert into student values(?,?)&quot;;
 
-PreparedStatement ps = conn.prepareStatement(sql);</code></pre><p>##3.设置占位符的内容<br>    ps.setInt(1,stu.getId());<br>    ps.setString(2, stu.getName());<br>    ps.executeUpdate();//执行代码 返回有几行变更</p>
-<p>.</p>
+PreparedStatement ps = conn.prepareStatement(sql);</code></pre><h2 id="3-设置占位符的内容"><a href="#3-设置占位符的内容" class="headerlink" title="3.设置占位符的内容"></a>3.设置占位符的内容</h2><pre><code>ps.setInt(1,stu.getId());
+ps.setString(2, stu.getName());
+ps.executeUpdate();//执行代码 返回有几行变更</code></pre><p>.</p>
 
       
 
