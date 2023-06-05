@@ -1,75 +1,109 @@
-<!-- Footer -->
+<section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
 
-<hr>
+          {% if site.social.github %}
+          <!-- Github -->
+          <li class="navigation__item_social">
+            <a href="https://github.com/{{site.social.github}}" title="@{{site.social.github}} 的 Github" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/github.png);"></div>
+            </a>
+          </li>
+          {% endif %}
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
-          {% if site.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ site.email | encode_email }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
+          {% if site.social.zhihu %}
+          <!-- Zhihu -->
+          <li class="navigation__item_social">
+            <a href="https://www.zhihu.com/people/{{site.social.zhihu}}" title="@{{site.social.zhihu}}" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/zhihu.png);"></div>
+            </a>
+          </li>
+
+          {% endif %}
+
+          {% if site.social.juejin %}
+          <!-- Zhihu -->
+          <li class="navigation__item_social">
+            <a href="https://juejin.im/user/{{site.social.juejin}}" title="@{{site.social.juejin}}" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/juejin.png);"></div>
+            </a>
+          </li>
+
+          {% endif %}
+
+          {% if site.social.jianshu %}
+          <!-- Zhihu -->
+          <li class="navigation__item_social">
+            <a href="https://www.jianshu.com/u/{{site.social.jianshu}}" title="@{{site.social.jianshu}}" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/jianshu.png);"></div>
+            </a>
+          </li>
+
+          {% endif %}
+
+          {% if site.social.weibo %}
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/{{site.social.weibo}}" title="@{{site.social.weibo}} 的微博" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/weibo.png);"></div>
             </a>
           </li>
           {% endif %}
-          {% if site.twitter_username %}
-          <li class="list-inline-item">
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
+
+          
+          {% if site.social.twitter %}
+          <!-- Twitter -->
+          <li class="navigation__item_social">
+            <a href="http://twitter.com/{{site.social.twitter}}" title="@{{site.social.twitter}}" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/twitter.png);"></div>
             </a>
           </li>
           {% endif %}
-          {% if site.facebook_username %}
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com/{{ site.facebook_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-              </span>
+
+
+          {% if site.social.mail %}
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:{{site.social.mail}}" title="Contact me">
+              <div class="footer-social-icon" style="background:url(/images/email.png);"></div>
             </a>
           </li>
           {% endif %}
-          {% if site.linkedin_username %}
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
+          
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <div class="footer-social-icon" style="background:url(/images/rss.png);"></div>
+              <span class="label">RSS</span>
             </a>
           </li>
-          {% endif %}
-          {% if site.github_username %}
-          <li class="list-inline-item">
-            <a href="https://github.com/{{ site.github_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-          {% if site.instagram_username %}
-          <li class="list-inline-item">
-            <a href="https://instagram.com/{{ site.instagram_username }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
-      </div>
-    </div>
-  </div>
-</footer>
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by <a href="http://leopardpan.cn/">leopardpan</a> |
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>

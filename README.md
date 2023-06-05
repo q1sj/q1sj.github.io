@@ -1,154 +1,115 @@
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) - Official Jekyll Version
 
-[Clean Blog Jekyll](https://startbootstrap.com/themes/clean-blog-jekyll/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working contact form powered by [Formspree](https://formspree.io/).
+[leopard](http://leopardpan.cn) 是一个简洁的博客模板，响应式主题， 适配了电脑、手机各种屏幕，看效果直接点击下面链接
+ 
+ * [博客链接](http://leopardpan.cn) （部署在国内，访问更快）         
+ * [Demo链接](http://leopardpan.github.io/) （部署在github page）         
 
-This repository holds the official Jekyll version of the Clean Blog theme on Start Bootstrap!
+如果你喜欢请 Star ，你的 Star 是我持续更新的动力, 谢谢 😄.
+ 
+### 你在搭建个人博客遇到任何问题都可以找我
 
-## Preview
+遇到解决不了的问题 [需要技术支持联系我](http://leopardpan.cn/support/)
 
-[![Clean Blog (Jekyll) Preview](https://startbootstrap.com/assets/img/screenshots/themes/clean-blog-jekyll.png)](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)
 
-**[View Live Preview](http://StartBootstrap.github.io/startbootstrap-clean-blog-jekyll/)**
+### 环境要求
 
-## Installation & Setup
+* Jekyll 支持: Mac 、Windows、ubuntu 、Linux 操作系统                     
+* Jekyll 需要依赖: Ruby、bundler
 
-### Using RubyGems
+### 使用手册
 
-When installing the theme using RubyGems, demo images, posts, and pages are not included. Follow the instructions below for complete setup.
+[Jekyll搭建个人博客](http://leopardpan.cn/2016/10/jekyll_tutorials1/)  :  使用Jekyll搭建个人博客的教程，及如何把这个博客模板修改成你自己的博客，里面也有大量的评论、Jekyll 搭建博客各种环境出现过的问题。
 
-1. (Optional) Create a new Jekyll site: `jekyll new my-site`
-2. Replace the current theme in your `Gemfile` with `gem "jekyll-theme-clean-blog"`.
-3. Install the theme (run the command inside your site directory): `bundle install`
-4. Replace the current theme in your `_config.yml` file with `theme: jekyll-theme-clean-blog`.
-5. Build your site: `bundle exec jekyll serve`
+[HEXO搭建个人博客](http://leopardpan.cn/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/) : 使用 HEXO 基于 Github Page 搭建个人博客， 教程里面累计了大量提问和评论，如果你在搭建博客时遇到问题，可以看看这个教程。 
 
-Assuming there are no errors and the site is building properly, follow these steps next:
 
-1. Create the following pages if they do not exist already (or change the extension of existing markdown files from `.md` to `.html`):
+#### 安装Jekyll
 
-   * `index.html` - set to `layout: home`
-   * `about.html` - set to `layout: page`
-   * `contact.html` - set to `layout: page`
-   * `posts/index.html` - set to `layout: page` (you will also need to create a `posts` directory)
+[Jekyll中文官方文档](http://jekyll.bootcss.com/) ， 如果你已经安装过了 Jekyll，可以忽略此处。
 
-2. Configure the `index.html` front matter. Example:
+> $ gem install jekyll
 
-    ```markdown
-    ---
-    layout: home
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+#### 获取博客模板
 
-3. Configure the `about.html`, `contact.html`, and `posts/index.html` front matter. Example:
+> $ git clone https://github.com/leopardpan/leopardpan.github.io.git
 
-    ```markdown
-    ---
-    layout: page
-    title: Page Title
-    description: This is the page description.
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+或者直接[下载博客](https://github.com/leopardpan/leopardpan.github.io/archive/master.zip)   
 
-4. For each post in the `_posts` directory, update the front matter. Example:
+进leopardpan.github.io/ 目录下， 开启本地服务 
 
-    ```markdown
-    ---
-    layout: post
-    title: "Post Title"
-    subtitle: "This is the post subtitle."
-    date: YYYY-MM-DD HH:MM:SS
-    background: '/PATH_TO_IMAGE'
-    ---
-    ```
+> $ jekyll server
 
-    For reference, look at the [demo repository](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) to see how the files are set up.
+在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到博客效果了。
 
-5. Add the form to the `contact.html` page. Add the following code to your `contact.html` page:
 
-    ```html
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Name</label>
-          <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Email Address</label>
-          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group col-xs-12 floating-label-form-group controls">
-          <label>Phone Number</label>
-          <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="form-group floating-label-form-group controls">
-          <label>Message</label>
-          <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-          <p class="help-block text-danger"></p>
-        </div>
-      </div>
-      <br>
-      <div id="success"></div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </div>
-    </form>
-    ```
+### 提示
 
-    Make sure you have the `email` setting in your `_config.yml` file set to a working email address! Once this is set, fill out the form and then check your email, verify the email address using the link sent to you by Formspree, and then the form will be working!
+>* 如果你想使用我的模板，请把 _posts/ 目录下的文章都去掉。
+>* 修改 _config.yml 文件里面的内容为你自己的个人信息。
 
-6. Build your site: `bundle exec jekyll serve`
+如果在部署博客的时候发现问题，可以直接在[Issues](https://github.com/leopardpan/leopardpan.github.io/issues)里面提问。        
 
-### Using Core Files
 
-When using the core files, the demo images, posts, and pages are all included with the download. After following the instructions below, you can then go and change the content of the pages and posts.
+### 把这个博客变成你自己的博客
 
-1. [Download](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/archive/master.zip) or Clone the repository.
-2. Update the following configuration settings in your `_config.yml` file:
+根据上面【提示】修改过后，在你的github里创建一个username.github.io的仓库，username指的值你的github的用户名。      
+创建完成后，把我的这个模板使用git push到你的username.github.io仓库下就行了。
+搭建博客如果遇到问题可以看看我教程[Jekyll搭建个人博客](http://leopardpan.cn/2016/10/jekyll_tutorials1/)。
 
-    * `baseurl`
-    * `url`
-    * `title`
-    * `email` (after setting this setting to a working email address, fill out the form on the contact page and send it - then check your email and verify the address and the form will send you messages when used)
-    * `description`
-    * `author`
-    * `twitter_username` (Optional)
-    * `facebook_username` (Optional)
-    * `github_username` (Optional)
-    * `linkedin_username` (Optional)
-    * `instagram_username` (Optional)
 
-3. Build your site: `bundle exec jekyll serve`
+### 赞助
 
-## Bugs and Issues
+你可以通过下方二维码赞助本项目，资金将用于服务器开销以及今后的公共服务
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/issues) here on GitHub!
+感谢所有赞助过本项目的朋友，你们都为本项目贡献了自己的一份力量
 
-## About
+<details>
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+<summary>微信二维码</summary>
+<img width="300" src="http://leopardpan.github.io/images/payimg/weipayimg.jpg" alt="wechat">
+</details>
 
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
+<details>
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
+<summary>支付宝二维码</summary>
+<img width="300" src="http://leopardpan.github.io/images/payimg/alipayim.jpg" alt="alipay">
+</details>
 
-* <http://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+### 效果预览
 
-## Copyright and License
+#### 头像效果
 
-Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll/blob/master/LICENSE) license.
+![](http://leopardpan.github.io/images/readme/icon.gif)
+
+如果你只想要我博客里的头像效果，你只需要拿 leopardpan.github.io/_includes/side-panel.html 文件里面 `头像效果` 和 leopardpan.github.io/css/main.css 里面最后面 `头像效果` 部分就行了。
+
+
+***
+
+#### 博客首页   
+
+![](http://leopardpan.github.io//images/readme/img4.png)   
+
+***  
+
+#### 每篇文章下面都支持打赏   
+
+![](http://leopardpan.github.io/images/readme/img3.png)
+
+#### 文章详情   
+
+![](http://leopardpan.github.io/images/readme/img1.png)
+
+
+#### 文章支持标签分类 
+
+![](http://leopardpan.github.io/images/readme/img2.png)
+
+#### 手机端效果
+
+<img width="300" src="http://leopardpan.github.io/images/readme/img5.png" alt="wechat">
+
+#### 感谢   
+
+本博客在[Vno Jekyll](https://github.com/onevcat/vno-jekyll)基础上修改的。  
