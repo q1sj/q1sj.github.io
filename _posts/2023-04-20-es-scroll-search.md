@@ -4,7 +4,7 @@ title: "elasticsearch滚动查询"
 date: 2023-04-20
 tags: [elasticsearch]
 ---
-# elasticsearch滚动查询
+
 es深翻页默认最大10000条,修改maxResult后存在性能问题,容易导致es崩溃
 部分业务场景可以使用滚动查询
 ## 封装滚动查询工具类
