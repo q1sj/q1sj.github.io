@@ -1,79 +1,49 @@
 # Basic
-title: Q1sj
-subtitle: 个人站
-description: 欢迎来到我的个人站~
-# 头像里面的标题
-avatarTitle: Q1sj
-# 头像里面的描述
-avatarDesc: Java / 机器学习
+title: Q1sj Blog
+subtitle: A blog-orientation theme for Jekyll
+welcome_message: <a href="https://github.com/onevcat/vno-jekyll" target="_blank">Download the theme</a>
+description: Vno Jekyll is a port of my Ghost theme vno.
+creator: <a href="http://onev.cat">@onevcat</a>
+
 url: "http://q1sj.cn"
 
-# 博客是否自动生成目录，false为不生成
-enableToc: true
-
-# Comment
-comment:
-     livere: MTAyMC81ODU0OC8zNTAxMQ  # https://www.livere.com
-#    disqus: leopard
-    # uyan: 2143225  # 有言id,登录有言官网申请
-
-# Social
-social:
-#    weibo: 5366874726
-    github: q1sj
-    # zhihu: panpanleopard
-    # juejin: xxx
-#    jianshu: 2ada30d8d0f7
-    # twitter: 
-    mail: q1sj@outlook.com
-
-
-# 百度统计 
-# 使用博客模板请去掉或者更换 id 
-baidu:
-    id: 4a876c1ae174ba75b535920f2eeae452
-
-# Google Analytics
-# 使用博客模板请去掉或者更换 id
-#ga:
-#    id: UA-84134159-3
-#    host: auto
-
-
-# 《----------------- 上面的信息修改成你自己的 ---------------------------》
-#
-#
-#  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
-#
-#
-# 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
-
-
 permalink: /:year/:month/:title/
+
 # Format
 highlighter: rouge
 
-textColor: #FF0000
-
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: clear
+cover_color: red
 
 # The blog button should not be removed.
 blog_button:
-    title: 博客主页
+    title: Blog
+    description: Q1sj blog
 
-# Navigation buttons in the front page.s
+# Navigation buttons in the front page.
 nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}      
-    - {title: 技术支持, description: support, url: '/support'}      
-    - {title: 关于我, description: about, url: '/about'}   
-    
+    - {title: Github, description: Github Projects, url: 'https://github.com/q1sj'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
 
 # Pagination
-gems: [jekyll-paginate,jekyll-sitemap]
-paginate: 20
+plugins: [jekyll-paginate]
+paginate: 10
 paginate_path: "page/:num/"
 
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+#    weibo: q1sj
+    github: q1sj
+#    twitter: q1sj
+#    gplus: 107108267983477358170
+    mail: q1sj@outlook.com
 
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
