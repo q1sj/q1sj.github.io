@@ -51,7 +51,7 @@ tags: [java]
                 </executions>
             </plugin>
 ```
-启动时增加参数 指定lib目录
+启动时需要增加参数 指定lib目录
 ```shell
 java -Dloader.path=./lib -jar demo.jar
 ```
