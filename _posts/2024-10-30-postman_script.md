@@ -13,7 +13,7 @@ tags: [测试]
 auth_token为变量名
 
 response.data.token为json中token字段,根据实际报文结构修改
-![alt text](../assets/images/postman_script_post_response.png)
+![alt text](/assets/images/postman_script_post_response.png)
 ```js
 const response = pm.response.json();
 pm.collectionVariables.set("auth_token", response.data.token);
